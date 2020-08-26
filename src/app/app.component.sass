@@ -1,0 +1,85 @@
+@mixin font($font-family, $font-file)
+    @font-face 
+        font-family: $font-family
+        src: url($font-file)
+    
+    
+@include font("Roboto", "/assets/Roboto.ttf")
+  
+header
+    padding: 0.1rem
+    width: 40rem
+    text-align: center
+    margin: 0 auto
+    font-size: 1.25rem
+
+.mainContent
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    .details
+        display: flex
+        justify-content: space-around
+        font-weight: 600
+        width: 65rem
+        padding: 0.5rem
+        margin: 2rem
+
+    .selector
+        width: 40rem
+        height: 50rem
+
+        svg
+            width: 100%
+            .bus
+                stroke-width: 7
+                fill-opacity: 0
+                opactity: 1
+                stroke-opacity: 1
+                stroke: #ffffff
+                stroke-dasharray: 350
+                stroke-dashoffset: 500
+                animation: dash 0.8s ease-out
+                stroke-linecap: round
+                
+                
+                @keyframes dash
+                    to
+                        stroke-dashoffset: 1900
+
+    .busSeats 
+        width: 12rem
+        height: 30rem
+        position: absolute
+        top: 23rem
+        display: flex
+        flex-direction: column
+        align-items: center
+    
+    .submit
+        width: 15rem
+        padding: 0.5rem
+        border-radius: 1rem
+        font-weight: 600
+        font-size: 1.25rem
+        text-align: center
+        margin: 0 auto
+        background: radial-gradient(circle, rgba(63,86,251,1) 0%, rgba(170,70,252,1) 100%)
+        filter: drop-shadow(0 0 0.25rem rgba(63, 86, 251, 1))
+        &:hover
+            box-shadow: 0 0 0.1rem black
+            cursor: pointer
+        &:active
+            box-shadow: inset 0.1rem 0.1rem 0.5rem black
+            cursor: pointer
+
+.container
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,69,1) 100%)
+    border-radius: 1rem
+    color: white
+    filter: drop-shadow(0 0 0.25rem rgba(34,193,195,1))
+
+footer
+    margin-top: 2rem
+    padding: 0.5rem

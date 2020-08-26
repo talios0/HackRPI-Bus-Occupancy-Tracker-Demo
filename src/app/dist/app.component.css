@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/Roboto.ttf");
+}
+header {
+  padding: 0.1rem;
+  width: 40rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mainContent .details {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  width: 65rem;
+  padding: 0.5rem;
+  margin: 2rem;
+}
+.mainContent .selector {
+  width: 40rem;
+  height: 50rem;
+}
+.mainContent .selector svg {
+  width: 100%;
+}
+.mainContent .selector svg .bus {
+  stroke-width: 7;
+  fill-opacity: 0;
+  opactity: 1;
+  stroke-opacity: 1;
+  stroke: #ffffff;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 500;
+  animation: dash 0.8s ease-out;
+  stroke-linecap: round;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1900;
+  }
+}
+.mainContent .busSeats {
+  width: 12rem;
+  height: 30rem;
+  position: absolute;
+  top: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContent .submit {
+  width: 15rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0 auto;
+  background: radial-gradient(circle, #3f56fb 0%, #aa46fc 100%);
+  filter: drop-shadow(0 0 0.25rem #3f56fb);
+}
+.mainContent .submit:hover {
+  box-shadow: 0 0 0.1rem black;
+  cursor: pointer;
+}
+.mainContent .submit:active {
+  box-shadow: inset 0.1rem 0.1rem 0.5rem black;
+  cursor: pointer;
+}
+
+.container {
+  background: linear-gradient(0deg, #22c1c3 0%, #2dfd45 100%);
+  border-radius: 1rem;
+  color: white;
+  filter: drop-shadow(0 0 0.25rem #22c1c3);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
